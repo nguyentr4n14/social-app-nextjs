@@ -52,3 +52,14 @@ export async function getUserByClerkId(clerkId: string) {
         },
     });
 }
+
+// Use the clerkId to get the userId from the database
+export async function getDbUserId() {
+    const { userId: clerkId } = await auth();
+    if (!clerkId) throw new Error('Unauthorized');
+
+    const user = await getUserByClerkId(clerkId);
+    if (!user) throw new Error('User not found');
+
+    return user.id;
+}
