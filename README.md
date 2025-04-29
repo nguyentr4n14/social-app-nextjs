@@ -4,6 +4,10 @@
 
 Next.js App Router, Postgres, Prisma, Clerk & TypeScript
 
+### Demo
+
+🔗 **Live App**: [Mivo](https://social-app-nextjs-iota.vercel.app/)
+
 ### Setup .env file
 
 ```js
